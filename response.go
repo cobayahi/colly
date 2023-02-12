@@ -45,7 +45,7 @@ type Response struct {
 
 // Save writes response body to disk
 func (r *Response) Save(fileName string) error {
-	return ioutil.WriteFile(fileName, r.Body, 0644)
+	return ioutil.WriteFile(fileName, r.Body, 0666)
 }
 
 // FileName returns the sanitized file name parsed from "Content-Disposition"
